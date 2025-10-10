@@ -1,29 +1,79 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Award, CheckCircle, Users, HeartHandshake, Star, ChevronRight } from 'lucide-react';
 import { heroSlides, products, whyChooseUs, testimonials, clients } from '../data/mockData';
 
 export default function Home() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const heroImages = [
+    'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://plus.unsplash.com/premium_photo-1682148026899-d21f17c04e80?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://plus.unsplash.com/premium_photo-1682148026899-d21f17c04e80?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="pt-20">
+    <div className="pt-2">
       {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-content">
-          <h1 className="heading-1 mb-6">
+      <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Carousel Background */}
+        <div className="absolute inset-0 w-full h-full">
+          {heroImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentImage ? 'opacity-70' : 'opacity-0'
+              }`}
+              style={{
+                backgroundImage: `url(${image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            />
+          ))}
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+
+        {/* Content */}
+        <div className="hero-content relative z-10 text-center px-4 sm:px-6">
+          <h1 className="heading-1 mb-6 text-white text-4xl sm:text-5xl lg:text-6xl font-bold">
             Empowering a Sustainable Future with Solar Energy
           </h1>
-          <p className="body-large text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="body-large text-gray-100 mb-8 max-w-2xl mx-auto text-lg sm:text-xl">
             Green Power Solar Energy — your trusted partner in solar installation, maintenance, and innovation. 
             Over 20 years of experience serving residential and industrial clients.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact" className="btn-primary px-8 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors inline-block">
               Get a Quote
             </Link>
-            <Link to="/about" className="btn-secondary">
+            <Link to="/about" className="btn-secondary px-8 py-3 bg-white hover:bg-gray-100 text-gray-800 font-semibold rounded-lg transition-colors inline-block">
               Learn More
             </Link>
           </div>
+        </div>
+
+        {/* Image Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex gap-3">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImage(index)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentImage ? 'bg-white w-6' : 'bg-white/50 hover:bg-white/75'
+              }`}
+              aria-label={`Go to image ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
