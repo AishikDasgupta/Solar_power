@@ -16,7 +16,7 @@ export const heroSlides = [
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    title: '4+ MW of Solar Projects Completed',
+    title: '3+ MW of Solar Projects Completed',
     subtitle: 'Trusted by major clients including Ramkrishna Mission, NIT Mizoram, and HPCL.',
   },
 ];
@@ -25,10 +25,10 @@ export const products = [
   {
     id: 1,
     name: 'Vikram Solar Panels',
-    description: 'High-efficiency monocrystalline solar panels with 25-year warranty',
+    description: 'High-efficiency solar panels with 25 to 30 years warranty',
     image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
     category: 'Solar Panels',
-    specs: '540W, 21% efficiency',
+    specs: '540wp-590wp, 21%-23% efficiency',
   },
   {
     id: 2,
@@ -36,15 +36,15 @@ export const products = [
     description: 'Grid-tie inverter with MPPT technology for maximum power output',
     image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
     category: 'Inverters',
-    specs: '5KW, 97% efficiency',
+    specs: '3kw-500kw, 97% efficiency',
   },
   {
     id: 3,
-    name: 'MPPT Charge Controller',
-    description: 'Advanced charge controller with LCD display and multiple protection features',
+    name: 'Durasol Inverter',
+    description: 'Off-grid and Hybrid inverter for reliable solar power conversion',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    category: 'Controllers',
-    specs: '60A, 12V/24V',
+    category: 'Inverters',
+    specs: '3kw-14kw capacity',
   },
   {
     id: 4,
@@ -52,15 +52,15 @@ export const products = [
     description: 'Deep cycle tubular battery designed for solar applications',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
     category: 'Batteries',
-    specs: '150Ah, 12V',
+    specs: '100Ah-200Ah, 12Volt',
   },
   {
     id: 5,
-    name: 'Luminous Solar Kit',
-    description: 'Complete solar home lighting system with LED bulbs and mobile charging',
+    name: 'Loom Solar Panels',
+    description: 'High-efficiency solar panels with excellent performance and durability',
     image: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    category: 'Solar Kits',
-    specs: '20W Panel, 18Ah Battery',
+    category: 'Solar Panels',
+    specs: '225wp-715wp',
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const whyChooseUs = [
   {
     icon: 'CheckCircle',
     title: 'Quality Brands',
-    description: 'We work with trusted brands like Vikram Solar, Havells, Luminous, and Exide',
+    description: 'We work with trusted brands like Vikram Solar, Havells, Loom, Waree, and Durasol',
   },
   {
     icon: 'Users',
@@ -137,14 +137,21 @@ export const clients = [
 export const brands = [
   'Vikram Solar',
   'Havells',
-  'Loom Solar',
-  'Waaree',
+  'Loom',
+  'Waree',
   'Durasol',
+  'Adani',
+  'Rayson',
+  'Sova',
+  'HR Solar',
+  'V-Guard',
+  'Growell',
+  'Premium',
+  'Theia',
   'Flin Energy',
   'V-Sol',
   'Deye',
   'Exide',
-  'Luminous',
   'Enphase',
   'Polycab',
   'Millennium',
@@ -159,8 +166,8 @@ export const serviceAreas = [
 ];
 
 export const marketingSystems = {
-  '1kv': {
-    title: '1 KV Solar Systems',
+  '3kw': {
+    title: '3 KW Solar Systems',
     description: 'Perfect for small residential homes and basic energy needs',
     features: [
       'Ideal for 1-2 BHK homes',
@@ -177,8 +184,8 @@ export const marketingSystems = {
     ],
     image: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
   },
-  '2kv': {
-    title: '2 KV Solar Systems',
+  '5kw': {
+    title: '5 KW Solar Systems',
     description: 'Ideal for medium-sized homes and small offices',
     features: [
       'Suitable for 2-3 BHK homes',
@@ -195,20 +202,25 @@ export const marketingSystems = {
     ],
     image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
   },
-  '3kv': {
-    title: '3 KV Solar Systems',
-    description: 'High-capacity systems for large homes and commercial use',
+  'commercial-industrial': {
+    title: '10 KW to 500 KW Commercial and Industrial Systems',
+    description: 'High-capacity systems for commercial and industrial applications',
     features: [
-      'Perfect for 3+ BHK homes',
-      'Powers all household appliances',
-      'Air conditioning support',
+      'Scalable from 10KW to 500KW',
+      'Commercial and industrial grade components',
       'Maximum energy independence',
-      'Premium components',
+      'Premium components and engineering',
+      'Professional installation and commissioning',
     ],
     applications: [
-      'Large residential homes',
-      'Commercial establishments',
-      'Industrial facilities',
+      'School',
+      'College',
+      'Hospital',
+      'Fuel Service Station',
+      'Cold Storage',
+      'Rice Mill',
+      'Large commercial facilities',
+      'Industrial operations',
       'Healthcare centers',
     ],
     image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -222,23 +234,23 @@ export const salesProducts = {
     products: [
       {
         name: 'Vikram Solar Monocrystalline',
-        power: '540W',
-        efficiency: '21.2%',
-        warranty: '25 years',
+        power: '540wp-595wp',
+        efficiency: '21.2%-23%',
+        warranty: '25-30 years',
         price: 'Contact for pricing',
       },
       {
-        name: 'Havells Polycrystalline',
-        power: '335W',
-        efficiency: '17.5%',
-        warranty: '25 years',
+        name: 'Loom Solar Panels',
+        power: '445wp-730wp',
+        efficiency: '21.2%-23%',
+        warranty: '25-30 years',
         price: 'Contact for pricing',
       },
       {
-        name: 'Waaree Bifacial',
-        power: '445W',
-        efficiency: '20.8%',
-        warranty: '25 years',
+        name: 'Waree Solar Panels',
+        power: '545wp-595wp',
+        efficiency: '21%-23%',
+        warranty: '25-30 years',
         price: 'Contact for pricing',
       },
     ],
@@ -249,23 +261,23 @@ export const salesProducts = {
     products: [
       {
         name: 'Havells Grid-Tie Inverter',
-        capacity: '5KW',
-        efficiency: '97.5%',
-        type: 'String Inverter',
+        capacity: '3kw-500kw',
+        efficiency: '97%',
+        type: 'Grid-Tie Inverter',
         price: 'Contact for pricing',
       },
       {
-        name: 'Luminous Off-Grid Inverter',
-        capacity: '3KW',
-        efficiency: '95%',
-        type: 'Pure Sine Wave',
+        name: 'Deye Inverter',
+        capacity: '3kw-500kw',
+        efficiency: '97%',
+        type: 'On-grid, Off-grid, Hybrid and Microinverter',
         price: 'Contact for pricing',
       },
       {
-        name: 'Deye Hybrid Inverter',
-        capacity: '8KW',
-        efficiency: '97.8%',
-        type: 'Hybrid MPPT',
+        name: 'Durasol Inverter',
+        capacity: '3kw-100kw',
+        efficiency: '97%',
+        type: 'Off-grid/Hybrid',
         price: 'Contact for pricing',
       },
     ],
@@ -301,7 +313,7 @@ export const salesProducts = {
 
 export const services = {
   installation: {
-    title: 'New Project Installation (3–10 KV)',
+    title: 'New Project Installation (3–10 KW)',
     description: 'Complete engineering, supply, installation, and commissioning services',
     process: [
       'Site survey and assessment',

@@ -114,14 +114,14 @@ export default function About() {
             <h2 className="heading-2 mb-4">Experience & Expertise</h2>
             <p className="body-large text-gray-600">
               With extensive experience in solar installations, we have successfully completed 
-              over 2.5 MW on-grid and 1.5 MW off-grid installations and maintenance projects.
+              over 2 MW on-grid and 1 MW off-grid installations and maintenance projects.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="product-card">
               <h3 className="heading-3 mb-4">On-Grid Installations</h3>
-              <p className="body-medium text-gray-700 mb-4">2.5+ MW Completed</p>
+              <p className="body-medium text-gray-700 mb-4">2 MW Completed</p>
               <ul className="space-y-2">
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="h-4 w-4 text-green-600" />
@@ -140,7 +140,7 @@ export default function About() {
             
             <div className="product-card">
               <h3 className="heading-3 mb-4">Off-Grid Installations</h3>
-              <p className="body-medium text-gray-700 mb-4">1.5+ MW Completed</p>
+              <p className="body-medium text-gray-700 mb-4">1 MW Completed</p>
               <ul className="space-y-2">
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="h-4 w-4 text-green-600" />

@@ -15,19 +15,20 @@ export const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   const marketingItems = [
-    { name: '1 KV Systems', path: '/marketing/1kv' },
-    { name: '2 KV Systems', path: '/marketing/2kv' },
-    { name: '3 KV Systems', path: '/marketing/3kv' },
+    { name: '3 KW Systems', path: '/marketing/3kw' },
+    { name: '5 KW Systems', path: '/marketing/5kw' },
+    { name: '10 KW to 500 KW Commercial and Industrial Systems', path: '/marketing/commercial-industrial' },
   ];
 
   const salesItems = [
     { name: 'Panel Solar', path: '/sales/panel-solar' },
     { name: 'Inverter', path: '/sales/inverter' },
     { name: 'Charge Controller', path: '/sales/charge-controller' },
+    { name: 'Others', path: '/sales/others' },
   ];
 
   const serviceItems = [
-    { name: 'New Project Installation (3–10 KV)', path: '/service/installation' },
+    { name: 'New Project Installation (3–10 KW)', path: '/service/installation' },
     { name: 'Old Project Repairing', path: '/service/repair' },
     { name: 'AMC (Only Industrial)', path: '/service/amc' },
   ];
@@ -114,16 +115,6 @@ export const Navbar = () => {
           </DropdownMenu>
         </div>
 
-        {/* Auth Buttons */}
-        <div className="hidden lg:flex items-center space-x-2">
-          <Link to="/login" className="btn-secondary">
-            Login
-          </Link>
-          <Link to="/register" className="btn-primary">
-            Register
-          </Link>
-        </div>
-
         {/* Mobile Menu Button */}
         <button
           className="lg:hidden p-2"
@@ -171,11 +162,6 @@ export const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-            </div>
-
-            <div className="flex flex-col space-y-2 pt-4">
-              <Link to="/login" className="btn-secondary w-full">Login</Link>
-              <Link to="/register" className="btn-primary w-full">Register</Link>
             </div>
           </div>
         </div>

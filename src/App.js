@@ -12,15 +12,16 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import WhyChooseUs from "./pages/WhyChooseUs";
 
-// Marketing pages (to be created)
-import Marketing1KV from "./pages/Marketing/Marketing1KV";
-import Marketing2KV from "./pages/Marketing/Marketing2KV";
-import Marketing3KV from "./pages/Marketing/Marketing3KV";
+// Marketing pages
+import Marketing3KW from "./pages/Marketing/Marketing3KW";
+import Marketing5KW from "./pages/Marketing/Marketing5KW";
+import MarketingCommercialIndustrial from "./pages/Marketing/MarketingCommercialIndustrial";
 
-// Sales pages (to be created)
+// Sales pages
 import SalesPanelSolar from "./pages/Sales/SalesPanelSolar";
 import SalesInverter from "./pages/Sales/SalesInverter";
 import SalesChargeController from "./pages/Sales/SalesChargeController";
+import SalesOthers from "./pages/Sales/SalesOthers";
 
 // Service pages (to be created)
 import ServiceInstallation from "./pages/Service/ServiceInstallation";
@@ -44,14 +45,15 @@ function App() {
             <Route path="/why-choose-us" element={<WhyChooseUs />} />
             
             {/* Marketing Routes */}
-            <Route path="/marketing/1kv" element={<Marketing1KV />} />
-            <Route path="/marketing/2kv" element={<Marketing2KV />} />
-            <Route path="/marketing/3kv" element={<Marketing3KV />} />
+            <Route path="/marketing/3kw" element={<Marketing3KW />} />
+            <Route path="/marketing/5kw" element={<Marketing5KW />} />
+            <Route path="/marketing/commercial-industrial" element={<MarketingCommercialIndustrial />} />
             
             {/* Sales Routes */}
             <Route path="/sales/panel-solar" element={<SalesPanelSolar />} />
             <Route path="/sales/inverter" element={<SalesInverter />} />
             <Route path="/sales/charge-controller" element={<SalesChargeController />} />
+            <Route path="/sales/others" element={<SalesOthers />} />
             
             {/* Service Routes */}
             <Route path="/service/installation" element={<ServiceInstallation />} />

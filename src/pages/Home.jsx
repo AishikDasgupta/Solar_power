@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Award, CheckCircle, Users, HeartHandshake, Star, ChevronRight } from 'lucide-react';
 import { heroSlides, products, whyChooseUs, testimonials, clients } from '../data/mockData';
+import ReviewSection from '../components/Reviews/ReviewSection';
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -118,7 +119,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="heading-2 mb-4">Why Choose Green Power Solar</h2>
             <p className="body-large text-gray-600 max-w-3xl mx-auto">
-              With over 20 years of experience and 4+ MW of successful installations, 
+              With over 20 years of experience and 3+ MW of successful installations, 
               we are your trusted partner for all solar energy needs.
             </p>
           </div>
@@ -196,6 +197,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Customer Reviews & Feedback Section */}
+      <ReviewSection />
 
       {/* CTA Section */}
       <section className="pad-xl bg-gradient-to-r from-green-600 to-green-700 text-white">

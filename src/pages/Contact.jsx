@@ -176,7 +176,7 @@ export default function Contact() {
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="body-small font-medium">GST Number:</span>
-                  <span className="body-small text-gray-600">19BISPM1609L1Z0</span>
+                  <span className="body-small text-gray-600">19BISPM1609L1Zo</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="body-small font-medium">MSME Certificate:</span>
@@ -204,14 +204,39 @@ export default function Contact() {
         {/* Map Section */}
         <div className="mt-16">
           <h3 className="heading-3 mb-6 text-center">Find Us on Map</h3>
-          <div className="product-card">
-            <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <p className="body-medium text-gray-600">Interactive Map</p>
-                <p className="body-small text-gray-500">
-                  412D/5, NSC Bose Road, Opp Garia Traffic Guard, Kolkata – 700047 WB
-                </p>
+          <div className="product-card p-0 overflow-hidden">
+            <div className="relative w-full h-96 rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps?q=412D/5,+NSC+Bose+Road,+Opp+Garia+Traffic+Guard,+Kolkata+700047&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Green Power Solar Energy - City Office Location"
+                className="absolute inset-0"
+              ></iframe>
+            </div>
+            <div className="p-4 bg-gray-50 border-t">
+              <div className="flex items-center justify-between">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <div className="text-sm">
+                    <p className="font-medium text-gray-900">City Office</p>
+                    <p className="text-gray-600">
+                      412D/5, NSC Bose Road, Opp Garia Traffic Guard, Kolkata – 700047 WB
+                    </p>
+                  </div>
+                </div>
+                <a 
+                  href="https://maps.app.goo.gl/WoZkhx4RoHJZiJoU6" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-green-600 hover:text-green-700 text-sm font-medium"
+                >
+                  Open in Maps →
+                </a>
               </div>
             </div>
           </div>

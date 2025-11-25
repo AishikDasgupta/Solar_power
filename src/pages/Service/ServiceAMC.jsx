@@ -107,11 +107,7 @@ export default function ServiceAMC() {
               <ul className="space-y-3">
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span className="body-small">Monthly maintenance visits</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span className="body-small">Advanced performance monitoring</span>
+                  <span className="body-small">Quarterly maintenance visits</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600" />
@@ -123,7 +119,7 @@ export default function ServiceAMC() {
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span className="body-small">Spare parts coverage (up to ₹10,000)</span>
+                  <span className="body-small">Spare parts coverage upto Rs500/- only</span>
                 </li>
               </ul>
             </div>

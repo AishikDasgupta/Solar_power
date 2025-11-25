@@ -70,10 +70,10 @@ export default function ServiceInstallation() {
       {/* System Capacity Range */}
       <section className="pad-xl">
         <div className="container">
-          <h2 className="heading-2 text-center mb-12">System Capacity Range (3-10 KV)</h2>
+          <h2 className="heading-2 text-center mb-12">System Capacity Range (3-10 KW)</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="product-card text-center">
-              <h3 className="heading-3 mb-4">3-5 KV Systems</h3>
+              <h3 className="heading-3 mb-4">3KW - 10KW Systems</h3>
               <p className="body-medium text-gray-700 mb-4">Perfect for large residential homes</p>
               <ul className="space-y-2 text-left">
                 <li className="body-small">• Powers entire household</li>
@@ -84,7 +84,7 @@ export default function ServiceInstallation() {
             </div>
             
             <div className="product-card text-center">
-              <h3 className="heading-3 mb-4">5-7 KV Systems</h3>
+              <h3 className="heading-3 mb-4">5KW - 100KW Systems</h3>
               <p className="body-medium text-gray-700 mb-4">Ideal for small commercial setups</p>
               <ul className="space-y-2 text-left">
                 <li className="body-small">• Small offices and shops</li>
@@ -95,7 +95,7 @@ export default function ServiceInstallation() {
             </div>
             
             <div className="product-card text-center">
-              <h3 className="heading-3 mb-4">7-10 KV Systems</h3>
+              <h3 className="heading-3 mb-4">100KW - 1MW Systems</h3>
               <p className="body-medium text-gray-700 mb-4">Commercial and industrial applications</p>
               <ul className="space-y-2 text-left">
                 <li className="body-small">• Large commercial facilities</li>
@@ -168,7 +168,7 @@ export default function ServiceInstallation() {
           <h2 className="heading-2 text-white mb-4">Ready for Professional Installation?</h2>
           <p className="body-large text-green-100 mb-8 max-w-2xl mx-auto">
             Get your solar system professionally installed by our certified engineers. 
-            From 3KV to 10KV systems, we handle projects of all sizes.
+            From 3KW to 10KW systems, we handle projects of all sizes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="bg-white text-green-600 hover:bg-gray-100 btn-primary">

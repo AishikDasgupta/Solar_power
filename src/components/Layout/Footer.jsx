@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { Sun, Mail, Phone, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -17,9 +17,22 @@ export const Footer = () => {
               Empowering a sustainable future with professional solar energy solutions since 2023.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
-              <Linkedin className="h-5 w-5 text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
-              <Instagram className="h-5 w-5 text-gray-400 hover:text-pink-400 cursor-pointer transition-colors" />
+              <a 
+                href="https://www.facebook.com/share/1BdkeeLaF4/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5 text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
+              </a>
+              <a 
+                href="https://www.instagram.com/g.p.solar.energy?igsh=cXYzOGlmemtvOWxv" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5 text-gray-400 hover:text-pink-400 cursor-pointer transition-colors" />
+              </a>
             </div>
           </div>
 
@@ -49,21 +62,37 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Contact Info</h3>
             <div className="space-y-3">
-              <div className="flex items-start space-x-3">
+              <a 
+                href="https://maps.app.goo.gl/WoZkhx4RoHJZiJoU6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-start space-x-3 hover:text-green-300 transition-colors"
+              >
                 <MapPin className="h-5 w-5 text-green-400 mt-0.5" />
                 <div className="text-sm text-gray-300">
                   <p>412D/5, NSC Bose Road</p>
                   <p>Opp Garia Traffic Guard</p>
                   <p>Kolkata – 700047 WB</p>
+                  <p className="text-green-400 mt-1 text-xs">View on Google Maps →</p>
+                </div>
+              </a>
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-green-400" />
+                <div className="text-sm text-gray-300">
+                  <p>99031 44213</p>
+                  <p>90511 67746</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-green-400" />
-                <span className="text-sm text-gray-300">gpse1988@gmail.com</span>
+                <MessageCircle className="h-5 w-5 text-green-400" />
+                <span className="text-sm text-gray-300">99031 44213</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-green-400" />
-                <span className="text-sm text-gray-300">9903144213</span>
+                <Mail className="h-5 w-5 text-green-400" />
+                <div className="text-sm text-gray-300">
+                  <p>gpse1988@gmail.com</p>
+                  <p>connect@gpse.co.in</p>
+                </div>
               </div>
             </div>
           </div>

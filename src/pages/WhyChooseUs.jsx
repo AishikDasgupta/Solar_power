@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
       description: 'Over two decades of expertise in electrical and solar installations with proven track record',
       details: [
         'Established by Mr. Aktar Ali Mondal with 20+ years experience',
-        'Successfully completed 4+ MW of solar installations',
+        'Successfully completed 3+ MW of solar installations',
         'Expertise in both residential and industrial projects'
       ]
     },
@@ -29,8 +29,8 @@ export default function WhyChooseUs() {
       title: 'Expertise in Both On-grid and Off-grid Systems',
       description: 'Comprehensive knowledge of all solar system types for diverse energy needs',
       details: [
-        '2.5+ MW on-grid installations completed',
-        '1.5+ MW off-grid systems installed',
+        '2 MW on-grid installations completed',
+        '1 MW off-grid systems installed',
         'Specialized in hybrid solutions'
       ]
     },
@@ -39,8 +39,8 @@ export default function WhyChooseUs() {
       title: 'Work with Trusted Brands',
       description: 'Partnership with leading solar equipment manufacturers ensures quality and reliability',
       details: [
-        'Vikram Solar, Havells, Loom Solar, Waaree',
-        'Luminous, Exide, Enphase, Polycab',
+        'Vikram Solar, Havells, Loom, Waree, Durasol',
+        'Adani, Rayson, Sova, Exide, Enphase, Polycab',
         'UTL, Millennium, Deye, and more trusted brands'
       ]
     },
@@ -107,7 +107,7 @@ export default function WhyChooseUs() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-1 mb-6">Why Choose Green Power Solar Energy?</h1>
             <p className="body-large text-gray-600 mb-8">
-              With over 20 years of experience and 4+ MW of successful installations, 
+              With over 20 years of experience and 3+ MW of successful installations, 
               we are your trusted partner for reliable, efficient, and sustainable solar energy solutions.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -116,7 +116,7 @@ export default function WhyChooseUs() {
                 <div className="body-small text-gray-600">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="heading-2 text-green-600 mb-2">4+ MW</div>
+                <div className="heading-2 text-green-600 mb-2">3+ MW</div>
                 <div className="body-small text-gray-600">Installed Capacity</div>
               </div>
               <div className="text-center">
