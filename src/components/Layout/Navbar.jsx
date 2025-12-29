@@ -47,12 +47,13 @@ export const Navbar = () => {
     <nav className="nav-header sticky top-0 z-50 bg-white shadow-sm">
       <div className="w-full flex items-center justify-between px-4 py-3">
         {/* Logo */}
-        <Link to="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
+        <Link to="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
           <img 
             src="/assets/Logo.jpg" 
             alt="Green Power Solar Energy" 
             className="h-8 sm:h-10 w-auto object-contain"
           />
+          <span className="text-xs sm:text-sm md:text-base lg:heading-3 text-green-600 font-semibold whitespace-nowrap">Green Power Solar Energy</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -136,9 +137,10 @@ export const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 -mr-2 text-gray-700 hover:text-green-600 transition-colors"
+          className="lg:hidden p-2 -mr-2 text-gray-700 hover:text-green-600 transition-colors flex-shrink-0 z-50"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? (
             <X className="h-6 w-6" />
@@ -148,19 +150,10 @@ export const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div 
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
-          style={{ top: '73px' }}
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
-
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed top-[73px] left-0 right-0 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out overflow-y-auto max-h-[calc(100vh-73px)] ${
-          isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'max-h-[calc(100vh-73px)] opacity-100 overflow-y-auto' : 'max-h-0 opacity-0 overflow-hidden'
         }`}
       >
         <div className="flex flex-col">
