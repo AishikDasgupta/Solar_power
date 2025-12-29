@@ -1,0 +1,105 @@
+import React from 'react';
+import { Zap, Shield, Flame, Droplet } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+export default function SalesPolycabCables() {
+  return (
+    <div className="pt-20">
+      <section className="pad-xl bg-gradient-to-br from-green-50 to-yellow-50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <Zap className="h-16 w-16 text-green-600 mx-auto mb-6" />
+            <h1 className="heading-1 mb-6">Polycab Solar Cables</h1>
+            <p className="body-large text-gray-600 mb-8">
+              UV resistant, flame retardant cables for solar installations. Premium quality cables designed 
+              specifically for solar power systems with excellent durability and safety features.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="pad-xl">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="/assets/18.jpg"
+                alt="Polycab Solar Cables"
+                className="w-full h-96 object-cover rounded-lg"
+              />
+            </div>
+            <div>
+              <h2 className="heading-2 mb-6">Product Specifications</h2>
+              <div className="space-y-4">
+                <div className="flex justify-between border-b pb-3">
+                  <span className="body-medium font-medium">Size:</span>
+                  <span className="body-medium text-green-600 font-semibold">4 sq mm</span>
+                </div>
+                <div className="flex justify-between border-b pb-3">
+                  <span className="body-medium font-medium">Insulation:</span>
+                  <span className="body-medium text-green-600 font-semibold">XLPE insulated</span>
+                </div>
+                <div className="flex justify-between border-b pb-3">
+                  <span className="body-medium font-medium">Category:</span>
+                  <span className="body-medium text-green-600 font-semibold">Accessories</span>
+                </div>
+              </div>
+              <div className="mt-8">
+                <p className="body-small text-gray-600 mb-4">Contact for pricing</p>
+                <Link to="/contact" className="btn-primary w-full">
+                  Get Quote
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pad-xl bg-gray-50">
+        <div className="container">
+          <h2 className="heading-2 text-center mb-12">Why Choose Polycab Solar Cables?</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <Shield className="h-12 w-12 text-green-600 mx-auto mb-4" />
+              <h3 className="heading-3 mb-3">UV Resistant</h3>
+              <p className="body-small text-gray-600">Specially designed to withstand UV radiation and outdoor exposure</p>
+            </div>
+            <div className="text-center">
+              <Flame className="h-12 w-12 text-green-600 mx-auto mb-4" />
+              <h3 className="heading-3 mb-3">Flame Retardant</h3>
+              <p className="body-small text-gray-600">Enhanced safety with flame retardant properties</p>
+            </div>
+            <div className="text-center">
+              <Droplet className="h-12 w-12 text-green-600 mx-auto mb-4" />
+              <h3 className="heading-3 mb-3">Weatherproof</h3>
+              <p className="body-small text-gray-600">Excellent resistance to moisture and weather conditions</p>
+            </div>
+            <div className="text-center">
+              <Zap className="h-12 w-12 text-green-600 mx-auto mb-4" />
+              <h3 className="heading-3 mb-3">High Quality</h3>
+              <p className="body-small text-gray-600">Premium XLPE insulation for reliable performance</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pad-xl bg-gradient-to-r from-green-600 to-green-700 text-white">
+        <div className="container text-center">
+          <h2 className="heading-2 text-white mb-4">Complete Your Solar Installation</h2>
+          <p className="body-large text-green-100 mb-8 max-w-2xl mx-auto">
+            Choose Polycab Solar Cables for safe and reliable solar power connections. Get your custom quote today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="bg-white text-green-600 hover:bg-gray-100 btn-primary">
+              Get Cable Quote
+            </Link>
+            <Link to="/sales/others" className="border-2 border-white text-white hover:bg-white hover:text-green-600 btn-secondary">
+              View Other Products
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+

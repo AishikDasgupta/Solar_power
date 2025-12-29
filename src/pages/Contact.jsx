@@ -176,7 +176,7 @@ export default function Contact() {
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="body-small font-medium">GST Number:</span>
-                  <span className="body-small text-gray-600">19BISPM1609L1Zo</span>
+                  <span className="body-small text-gray-600">19BISPM1609L1Z0</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="body-small font-medium">MSME Certificate:</span>

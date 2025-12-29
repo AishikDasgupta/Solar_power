@@ -8,10 +8,22 @@ export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const heroImages = [
-    'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://plus.unsplash.com/premium_photo-1682148026899-d21f17c04e80?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://plus.unsplash.com/premium_photo-1682148026899-d21f17c04e80?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    '/assets/13.jpg',
+    '/assets/14.jpg',
+    '/assets/15.jpg'
   ];
+
+  const getProductRoute = (productId) => {
+    const routes = {
+      1: '/sales/vikram-solar-panels',
+      2: '/sales/havells-inverter',
+      3: '/sales/durasol-inverter',
+      4: '/sales/exide-battery',
+      5: '/sales/loom-solar-panels',
+      6: '/sales/polycab-cables',
+    };
+    return routes[productId] || '/sales/panel-solar';
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,7 +34,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="pt-2">
+    <div>
       {/* Hero Section */}
       <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden">
         {/* Carousel Background */}
@@ -103,12 +115,19 @@ export default function Home() {
                   <span className="text-sm font-medium text-green-600">{product.category}</span>
                   <span className="text-sm text-gray-500">{product.specs}</span>
                 </div>
-                <Link to="/sales/panel-solar" className="btn-secondary w-full">
+                <Link to={getProductRoute(product.id)} className="btn-secondary w-full">
                   View Details
                   <ChevronRight className="h-4 w-4 ml-2" />
                 </Link>
               </div>
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link to="/sales/panel-solar" className="btn-primary inline-flex items-center">
+              View More
+              <ChevronRight className="h-4 w-4 ml-2" />
+            </Link>
           </div>
         </div>
       </section>
