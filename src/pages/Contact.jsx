@@ -12,6 +12,7 @@ export default function Contact() {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -20,11 +21,40 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock form submission
-    toast.success('Thank you! Your message has been sent successfully. We will contact you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      const GOOGLE_SCRIPT_URL = process.env.REACT_APP_GOOGLE_SCRIPT_URL || 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+      
+      if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
+        toast.error('Google Script URL not configured. Please add REACT_APP_GOOGLE_SCRIPT_URL to your .env file.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Use no-cors mode for Google Apps Script to avoid CORS preflight issues
+      // Note: With no-cors, we can't read the response, but the data will be sent
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      // With no-cors mode, response.ok will always be false, so we assume success
+      // The data will still be sent to Google Sheets
+      toast.success('Thank you! Your message has been sent successfully. We will contact you soon.');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('There was an error sending your message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -104,8 +134,8 @@ export default function Contact() {
                 />
               </div>
               
-              <Button type="submit" className="btn-primary w-full">
-                Send Message
+              <Button type="submit" className="btn-primary w-full" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>
