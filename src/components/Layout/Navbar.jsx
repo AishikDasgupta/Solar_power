@@ -88,6 +88,12 @@ export const Navbar = () => {
           >
             Gallery
           </Link>
+          <Link
+            to="/electricity"
+            className={`nav-link ${isActive('/electricity') ? 'bg-gray-100' : ''}`}
+          >
+            Electricity
+          </Link>
 
           {/* Marketing Dropdown */}
           <DropdownMenu>
@@ -193,7 +199,14 @@ export const Navbar = () => {
           >
             Gallery
           </Link>
-          
+          <Link 
+            to="/electricity" 
+            className={`px-6 py-4 border-b border-gray-100 hover:bg-green-50 transition-colors ${isActive('/electricity') ? 'bg-green-50 text-green-600 font-semibold' : 'text-gray-700'}`}
+            onClick={handleLinkClick}
+          >
+            Electricity
+          </Link>
+           
           {/* Accordion for Sub-menus */}
           <Accordion type="multiple" className="w-full">
             {/* Marketing Accordion */}

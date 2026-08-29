@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import Gallery from "./pages/Gallery";
+import Electricity from "./pages/Electricity";
 
 // Marketing pages
 import Marketing3KW from "./pages/Marketing/Marketing3KW";
@@ -51,6 +52,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/why-choose-us" element={<WhyChooseUs />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/electricity" element={<Electricity />} />
             
             {/* Marketing Routes */}
             <Route path="/marketing/3kw" element={<Marketing3KW />} />
